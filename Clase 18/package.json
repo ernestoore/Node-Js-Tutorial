@@ -1,0 +1,18 @@
+{
+    "scripts": {
+        "qa": "ts-node src/server2.ts",
+        "build": "tsc",
+        "start:prod": "node dist/server.js",
+        "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/server2.js\"",
+        "prod": "npm run build && npm run start:prod"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.2",
+        "ts-node": "^8.6.0",
+        "tsc-watch": "^4.0.0",
+        "typescript": "^3.7.4"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
