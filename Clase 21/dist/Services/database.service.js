@@ -11,7 +11,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
 const Config_1 = require("../Config");
-const Models_1 = require("../Models");
 const initializeDatabase = () => __awaiter(void 0, void 0, void 0, function* () {
     mongoose.Promise = global.Promise;
     const connectionPromise = new Promise((resolve, reject) => {
@@ -22,8 +21,8 @@ const initializeDatabase = () => __awaiter(void 0, void 0, void 0, function* () 
             useUnifiedTopology: true
         });
         mongoose.connection.on("connected", () => {
-            Models_1.modeloUsuario;
-            Models_1.modeloRecetas;
+            require("../Models/usuario.models");
+            require("../Models/recetas.models");
             resolve();
         });
         mongoose.connection.on("error", error => {

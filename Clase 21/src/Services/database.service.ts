@@ -15,8 +15,8 @@ const initializeDatabase = async() => {
         })
 
         mongoose.connection.on("connected", () => {
-            modeloUsuario
-            modeloRecetas
+            require("../Models/usuario.models")
+            require("../Models/recetas.models")
             resolve()
         })
         mongoose.connection.on("error", error => {

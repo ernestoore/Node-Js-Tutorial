@@ -7,6 +7,7 @@ const controller = new user_controller_1.default();
 route.get("/", controller.listar);
 route.get("/:id", controller.detalle);
 route.post("/", controller.insertar);
+route.post("/login", controller.login);
 route.put("/:id", controller.modificar);
 route.delete("/:id", controller.eliminar);
 exports.default = route;

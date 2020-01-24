@@ -12,6 +12,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class genericController {
     constructor(model) {
         this.model = model;
+        this.listar = this.listar.bind(this);
+        this.detalle = this.detalle.bind(this);
+        this.insertar = this.insertar.bind(this);
+        this.modificar = this.modificar.bind(this);
+        this.eliminar = this.eliminar.bind(this);
     }
     listar(req, res) {
         return __awaiter(this, void 0, void 0, function* () {

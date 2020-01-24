@@ -2,7 +2,11 @@
 export class genericController{
 
     constructor(private model: any){
-        
+        this.listar = this.listar.bind(this)
+        this.detalle = this.detalle.bind(this)
+        this.insertar = this.insertar.bind(this)
+        this.modificar = this.modificar.bind(this)
+        this.eliminar = this.eliminar.bind(this)
     }
 
     async listar(req, res){
